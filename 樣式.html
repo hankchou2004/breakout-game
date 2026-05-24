@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <title>Breakout GAME - BY NIDHI UPMAN</title>
+        <link rel="stylesheet" href="game.css">
+        
+        <script type="module" src="樣式.js"></script>
+   </head>
+    <body>
+        <div id="parent-container">
+            <div class="color-bar">
+                    <button id="goToInitialScreen">返回</button>
+                </div>
+                <h1>樣式選擇</h1>
+                <div>
+                    <button id="changeBackgroundColor">選擇背景顏色</button>
+                    <button id="changePlayerColor">選擇玩家顏色</button>
+                    <button id="changeBallColor">選擇球顏色</button>
+                    <button id="changeBlockColor">選擇磚塊顏色</button>
+                    <button id="changeWordColor">選擇文字顏色</button>
+                </div>
+                <!-- 父元素，包裹着 board 和按钮 -->
+                <div id="board-container">
+                    <canvas id="board" width="500" height="500"></canvas>
+                </div>
+        </div >
+    </body>
+</html>

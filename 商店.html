@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商店</title>
+    <link rel="stylesheet" href="game.css">
+    <script type="module" src="商店.js"></script>
+</head>
+<body class="page-shop">
+    <div id="parent-container">
+        <center>
+            <div>
+                <button id="goToInitialScreen">返回</button>
+            </div>
+            <h1>商店</h1>
+            <!-- 父元素，包裹着 board 和按钮 -->
+            <div id="board-container">
+                <canvas id="board" width="500" height="500"></canvas>
+                 <!-- 道具1 -->
+                <div class="tool-container" id="tool1-container">
+                    <button id="tool1-button">道具1:$10</button>
+                </div>
+                <!-- 道具2 -->
+                <div class="tool-container" id="tool2-container">
+                    <button id="tool2-button">道具2:$5</button>
+                </div>
+                <!-- 道具3 -->
+                <div class="tool-container" id="tool3-container">
+                    <button id="tool3-button">道具3:$30</button>
+                </div>
+                <!-- 道具4 -->
+                <div class="tool-container" id="tool4-container">
+                    <button id="tool4-button">隨機:$10</button>
+                </div>
+            </div>
+        </center> 
+    </div >       
+</body>
+</html>

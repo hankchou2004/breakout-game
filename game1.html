@@ -1,0 +1,35 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <title>Breakout GAME - BY NIDHI UPMAN</title>
+        <link rel="stylesheet" href="game.css">
+        <script type="module" src="game1.js"></script>
+    </head>
+    <body>
+        <div id="parent-container">
+            <center>
+                <div>
+                    <button id="goToInitialScreen">返回</button>
+                </div>
+                <h1>遊戲1</h1>
+                <label for="ballsize">大小:</label>
+                <input type="range" id="ballsize" min="5" max="50" step="5" value="10">
+                <span id="ballsizeValue">10</span>
+                <label for="balltotalSpeed">速度:</label>
+                <input type="range" id="totalSpeed" min="5" max="25" step="5" value="10">
+                <span id="totalSpeedValue">25</span>
+                <!-- 父元素，包裹着 board 和按钮 -->
+                <div id="board-container">
+                    <canvas id="board" width="500" height="500"></canvas>
+                    <button id="tool1-button">道具1</button>
+                    <button id="tool2-button">道具2</button>
+                    <button id="tool3-button">道具3</button>
+                </div>
+            </center> 
+        </div >       
+    </body>
+</html>
+
