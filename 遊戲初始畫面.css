@@ -1,0 +1,90 @@
+/* 使整個頁面的內容居中 */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 父容器，用来包裹 #board 和按钮 */
+#parent-container {
+    position: relative;
+    width: 600px; /* 可以根据需要调整 */
+    height: 600px; /* 可以根据需要调整 */
+}
+
+/* 使board不超出父容器 */
+#board-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+#board {
+    position:relative;
+    background-color: black;
+    border-top: 5px solid skyblue;
+    border-left: 5px solid skyblue;
+    border-right: 5px solid skyblue;
+    border-bottom: 5px solid skyblue;
+    width:500px;
+    height:500px;
+}
+
+
+
+
+/* 所有按鈕通用樣式 */
+button {
+    background-color: skyblue;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 15px; /* 設定圓角長方形 */
+    transition: background-color 0.3s;
+    position: absolute;
+    width: 150px;  /* 設定長方形按鈕的寬度 */
+    height: 60px; /* 設定長方形按鈕的高度 */
+    display: flex; /* 讓按鈕的內容可以居中 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+}
+
+/* 按鈕滑鼠懸停顏色 */
+button:hover {
+    background-color: dodgerblue;
+}
+
+/* 主題選擇按鈕位置 */
+#theme-button {
+    top: 90px; /* 設定距離畫布頂部的距離 */
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+/* 商店按鈕位置 */
+#shop-button {
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+/* 遊戲1按鈕位置 */
+#game1-button {
+    top: 270px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+/* 遊戲2按鈕位置 */
+#game2-button {
+    top: 360px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
