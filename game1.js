@@ -229,11 +229,15 @@ window.onload = function () {
     ["touchstart", "mousedown"].forEach(ev => {
         btnLeft.addEventListener(ev, e => { e.preventDefault(); startMoving(-1); }, { passive: false });
         btnRight.addEventListener(ev, e => { e.preventDefault(); startMoving(1); }, { passive: false });
-        btnStart.addEventListener(ev, e => {
-            e.preventDefault();
-            if (gameOver) resetGame();
-            else startgame = true;
-        }, { passive: false });
+    });
+
+    btnStart.addEventListener("click", () => {
+        if (gameOver) resetGame();
+        else startgame = true;
+    });
+
+    board.addEventListener("click", () => {
+        if (!startgame) startgame = true;
     });
 
     ["touchend", "touchcancel", "mouseup"].forEach(ev => {
