@@ -206,6 +206,41 @@ window.onload = function () {
     requestAnimationFrame(update);
     document.addEventListener("keydown", movePlayer);
 
+    // 手機觸控方向鍵
+    const btnLeft = document.getElementById("btn-left");
+    const btnRight = document.getElementById("btn-right");
+    const btnStart = document.getElementById("btn-start");
+    let moveInterval = null;
+
+    function startMoving(dir) {
+        clearInterval(moveInterval);
+        moveInterval = setInterval(() => {
+            if (gameOver || !startgame) return;
+            const next = player.x + dir * player.velocityX;
+            if (!outOfBounds(next)) player.x = next;
+        }, 30);
+    }
+
+    function stopMoving() {
+        clearInterval(moveInterval);
+        moveInterval = null;
+    }
+
+    ["touchstart", "mousedown"].forEach(ev => {
+        btnLeft.addEventListener(ev, e => { e.preventDefault(); startMoving(-1); }, { passive: false });
+        btnRight.addEventListener(ev, e => { e.preventDefault(); startMoving(1); }, { passive: false });
+        btnStart.addEventListener(ev, e => {
+            e.preventDefault();
+            if (gameOver) resetGame();
+            else startgame = true;
+        }, { passive: false });
+    });
+
+    ["touchend", "touchcancel", "mouseup"].forEach(ev => {
+        btnLeft.addEventListener(ev, stopMoving);
+        btnRight.addEventListener(ev, stopMoving);
+    });
+
     // 創建方塊
     createBlocks();
     
